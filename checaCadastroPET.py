@@ -51,3 +51,32 @@ def checaCadastroPET(
 
     cadastro[chave] = dados_pet
     return cadastro
+
+if __name__ == "__main__":
+    # Dicionário inicial exigido no PDF
+    db_pets = {
+        ("CC", "00001", 2024): ['Max', 'Cachorro', 2024],
+        ("GT", "00002", 2018): ['Miau', 'Gato', 2018],
+    }
+
+    # Dados de teste exigidos
+    dados_teste1 = ['Lulu', 'Cachorro', 2020]
+    id_teste1 = "CC-00001-2023" # ID formatado para teste 1
+
+    dados_teste2 = ['Loro', 'Ave', 2025]
+    id_teste2 = "AV-00003-2025" # ID formatado para teste 2
+
+    print("--- Testando checaCadastroPET ---")
+    print("\nDicionário ANTES dos testes:")
+    print(db_pets)
+
+    # Executando Teste 1
+    print("\nExecutando Teste 1 (cadastroTeste1):")
+    db_pets = checaCadastroPET(db_pets, id_teste1, dados_teste1)
+    
+    # Executando Teste 2
+    print("\nExecutando Teste 2 (cadastroTeste2):")
+    db_pets = checaCadastroPET(db_pets, id_teste2, dados_teste2)
+
+    print("\nDicionário DEPOIS dos testes:")
+    print(db_pets)

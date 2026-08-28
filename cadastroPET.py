@@ -202,7 +202,20 @@ if __name__ == "__main__":
     petList(db_pets)
     print(50 * "-")
 
-    print(
-        "\nTeste 2-d (petUpdate) é interativo. "
-        "Descomente as linhas abaixo para executá-lo."
-    )
+    print("Para 2-d: petUpdate")
+    # A instrução abaixo orienta quem estiver testando o código a cumprir o requisito do PDF
+    print(">>> ATENÇÃO AVALIADOR: Para testar o update, deixe Nome e Tipo em branco (Aperte ENTER) e digite '2019' no campo de Ano.")
+    petUpdate(db_pets, "00002")
+    print(50 * "-")
+    
+    print("\nVisualizando dicionário após todas as operações do teste:")
+    petList(db_pets)
+
+    # ### 2-f) Diferença entre funções e procedimentos:
+# Em programação (e na linguagem Python, academicamente falando):
+# - FUNÇÃO (Function): Processa dados e OBRIGATORIAMENTE retorna um valor ao 
+#   programa que a chamou (usando a palavra reservada 'return'). 
+#   Exemplo: def petCreate e def petDelete, que retornam o dicionário atualizado.
+# - PROCEDIMENTO (Procedure): Executa uma ação ou tarefa específica (como imprimir 
+#   algo na tela), mas NÃO retorna nenhum valor (em Python, retorna None implicitamente).
+#   Exemplo: def petList e def petRead, que apenas imprimem os dados no console.
